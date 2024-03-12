@@ -67,11 +67,10 @@ a {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
-  font-size:1.125rem;
+  font-size: 1.125rem;
   margin-bottom: 2rem;
   p:last-of-type {
     margin-bottom: 0.5rem;
-
   }
 }
 .blurb-title {
