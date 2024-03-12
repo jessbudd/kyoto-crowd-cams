@@ -5,7 +5,7 @@ body {
   font-family: 'M PLUS 1', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: url('../images/japan-bg.jpg')
+  background: url('./images/japan-bg.jpg')
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
