@@ -1,11 +1,11 @@
 const videos = [
   {
-    id: 'Op-lf2NRMzs',
-    title: 'Arashiyama Bamboo forest',
-  },
-  {
     id: 'pgqwfZj9HPY',
     title: 'Fushimi Inari Taisha Shrine',
+  },
+  {
+    id: 'Op-lf2NRMzs',
+    title: 'Arashiyama Bamboo forest',
   },
   {
     id: 'jqtsC5BYlIk',
@@ -16,20 +16,20 @@ const videos = [
     title: 'Nishiki Market',
   },
   {
-    id: 'S6IkZhhwG4A',
-    title: 'Philosopher’s Path',
-  },
-  {
-    id: 'v9rQqa_VTEY',
-    title: 'Station Bus Terminal',
-  },
-  {
     id: 'Gxt3YCa2Phc',
     title: 'Nene no michi (Nene Street)',
   },
   {
     id: 'PXg3ZXgMkGk',
     title: 'Hanamikoji Street',
+  },
+  {
+    id: 'S6IkZhhwG4A',
+    title: 'Philosopher’s Path',
+  },
+  {
+    id: 'v9rQqa_VTEY',
+    title: 'Station Bus Terminal',
   },
 ];
 
@@ -47,6 +47,7 @@ const renderVideos = () => {
     div.className = 'grid-item';
     const h2 = document.createElement('h2');
     h2.textContent = video.title;
+    h2.className = 'video-title';
     div.appendChild(h2);
     div.appendChild(iframe);
     videosContainer.appendChild(div);
