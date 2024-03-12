@@ -43,6 +43,7 @@ const renderVideos = () => {
     iframe.allowfullscreen = true;
     iframe.className = 'yt-embed';
     iframe.title = video.title;
+    iframe.loading = 'lazy';
     const div = document.createElement('div');
     div.className = 'grid-item';
     const h2 = document.createElement('h2');
