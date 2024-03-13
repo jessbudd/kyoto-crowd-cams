@@ -38,12 +38,12 @@ const renderVideos = () => {
 
   videos.forEach(video => {
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?&autoplay=1&mute=1`;
-    iframe.frameborder = 0;
+    iframe.allow = "fullscreen";
     iframe.className = 'yt-embed';
-    iframe.title = video.title;
+    iframe.frameborder = 0;
     iframe.loading = 'lazy';
-    iframe.allow = "picture-in-picture; fullscreen";
+    iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?&autoplay=1&mute=1`;
+    iframe.title = video.title;
     const div = document.createElement('div');
     div.className = 'grid-item';
     const h2 = document.createElement('h2');
