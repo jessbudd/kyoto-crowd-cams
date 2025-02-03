@@ -1,6 +1,6 @@
 const videos = [
   {
-    id: 'pgqwfZj9HPY',
+    id: 'MMeBDRfRHyA',
     title: 'Fushimi Inari Taisha Shrine',
   },
   {
@@ -16,20 +16,20 @@ const videos = [
     title: 'Nishiki Market',
   },
   {
-    id: 'Gxt3YCa2Phc',
-    title: 'Nene no michi (Nene Street)',
-  },
-  {
-    id: 'PXg3ZXgMkGk',
-    title: 'Hanamikoji Street',
-  },
-  {
     id: 'S6IkZhhwG4A',
     title: 'Philosopher’s Path',
   },
   {
     id: 'v9rQqa_VTEY',
     title: 'Station Bus Terminal',
+  },
+  {
+    id: 'Gxt3YCa2Phc',
+    title: 'Nene no michi (Nene Street)',
+  },
+  {
+    id: 'PXg3ZXgMkGk',
+    title: 'Hanamikoji Street',
   },
 ];
 
@@ -38,17 +38,15 @@ const renderVideos = () => {
 
   videos.forEach(video => {
     const iframe = document.createElement('iframe');
-    iframe.allow = "fullscreen";
-    iframe.className = 'yt-embed';
+    iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?&autoplay=1&mute=1&controls=0`;
     iframe.frameborder = 0;
-    iframe.loading = 'lazy';
-    iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?&autoplay=1&mute=1`;
+    iframe.allowfullscreen = true;
+    iframe.className = 'yt-embed';
     iframe.title = video.title;
     const div = document.createElement('div');
     div.className = 'grid-item';
     const h2 = document.createElement('h2');
     h2.textContent = video.title;
-    h2.className = 'video-title';
     div.appendChild(h2);
     div.appendChild(iframe);
     videosContainer.appendChild(div);
